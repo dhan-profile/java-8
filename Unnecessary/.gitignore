@@ -1,0 +1,4 @@
+Unnecessary/Add.java
+Unnecessary/Unwanted file1.txt
+Unnecessary/NodeModules/*
+!Unnecessary/NodeModules/ImportantFile.txt
