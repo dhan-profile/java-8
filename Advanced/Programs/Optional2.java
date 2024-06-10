@@ -61,6 +61,13 @@ public class Optional2 {
 		} catch (NullPointerExceptionDuplicate e) {
 			System.out.println("NULL Exception Caught !!");
 		}
-
+		System.out.println("======================");
+		Optional<String> op7 = Optional.ofNullable("Hello");
+		Optional<String> op8 = Optional.ofNullable("hello");
+		Optional<String> op0 = Optional.ofNullable(null);
+		System.out.println("op7.isPresent(): "+op7.isPresent());
+		System.out.println("op7.get(): "+op7.get());
+		System.out.println("op0.orElse(\"Not Available\"): "+op0.orElse("Not Available"));
+		
 	}
 }

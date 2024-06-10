@@ -54,7 +54,8 @@ public class Optional_Ex {
 	        System.out.println(op1.filter(t->t.contains("s")));
 
 // ifPresent()
-	        op.ifPresent(value -> System.out.println(value.concat(" welcome")));
+	       op.ifPresent(value -> System.out.println(value.concat(" welcome")));
 	       op1.ifPresent(value -> System.out.println(value.concat(" welcome")));
+	       
 	}
 }
