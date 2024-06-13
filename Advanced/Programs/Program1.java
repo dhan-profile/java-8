@@ -1,7 +1,11 @@
 package Programs;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 public class Program1 {
 	public static void main(String[] args) {
 		ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -17,9 +21,38 @@ public class Program1 {
 		System.out.println("Ascending: "+arr);
 		Collections.sort(arr, val2);
 		System.out.println("Descending: "+arr);
+		
 		System.out.print("Values greater than 3: ");
 		arr.stream().filter(n -> (n>3)).forEach(v -> System.out.print(v+" "));
+		
+//		=============================
 		System.out.print("\nPeek: ");
-		arr.stream().peek(System.out::print);
+//		=============================
+//		Peek operation dependents upon the terminal operation. 
+//		The peek operation without terminal operation will do nothing.
+		arr.stream().peek(t -> System.out.print(t+" ")).collect(Collectors.toList());
+		
+//		===============================
+		System.out.print("\nlimit(3): ");
+//		================================
+		arr.stream().limit(3).peek(t -> System.out.print(t+" ")).collect(Collectors.toList());
+		
+//		===============================
+		System.out.print("\nskip(3): ");
+//		================================		
+		arr.stream().skip(3).peek(t -> System.out.print(t+" ")).collect(Collectors.toList());
+		
+//		===============================
+		System.out.print("\ncount(long): ");
+//		================================
+		System.out.println(arr.stream().count());
+		long c = arr.stream().count();
+		System.out.println("count() using long var: "+c);
+		
+//		======================================
+		System.out.print("forEachOrdered(): ");
+//		======================================
+		arr.stream().filter(t -> t % 2 == 0).forEachOrdered(t -> System.out.print(t+" "));
+		
 	}
 }
