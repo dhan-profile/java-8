@@ -54,5 +54,10 @@ public class Program1 {
 //		======================================
 		arr.stream().filter(t -> t % 2 == 0).forEachOrdered(t -> System.out.print(t+" "));
 		
+		double mod = 10e9+7;
+		final int MOD = 1000000007;
+		System.out.println(mod);
+		System.out.println(MOD);
+		
 	}
 }

@@ -3,6 +3,10 @@ package Programs;
 import java.util.Optional;
 
 public class Example {
+	public static void main() {
+		
+	}
+
 	public static void main(String[] args) {
 		String[] str = new String[10];        
         str[5] = "JAVA OPTIONAL CLASS EXAMPLE";  // Setting value for 5th index  
@@ -18,5 +22,11 @@ public class Example {
         // It returns value if available, otherwise returns specified value,  
         System.out.println("orElse: "+value.orElse("Value is not present"));  
         System.out.println("orElse: "+empty.orElse("Value is not present"));  
+        
+        double main = 0.0;
+//        System.out.println(1.5/0);
+        double val = 5;
+        System.out.println(0.0/0);
+        
 	}
 }
