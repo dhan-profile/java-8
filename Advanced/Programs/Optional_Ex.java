@@ -15,6 +15,10 @@ public class Optional_Ex {
 // empty()
 	      Optional<String> op5 = Optional.empty();
 	      System.out.println(op5);
+	        Optional<String> empty = Optional.of("GOOD"); 
+	        System.out.println(empty);
+	        // It returns value if available, otherwise returns specified value
+	        System.out.println("orElse: " + empty.orElse("Value is not present"));
 	      
 //   of() - mandatory give String, does not accept null value
 	      Optional<String> op = Optional.of(s); System.out.println(op);
