@@ -35,7 +35,7 @@ public class LambdaExpression {
 //		2) Create a Lambda Expression that takes a string as input and returns its length.
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter a string: ");
-		String s = br.readLine(); 
+		String s = br.readLine();
 //		Using Function interface and Lambda Expression:
 //		----------------------------------------------
 		Function<String, Integer> fn = str -> str.length();
